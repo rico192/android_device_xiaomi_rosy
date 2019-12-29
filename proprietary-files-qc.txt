@@ -303,9 +303,6 @@ vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
 
-# Ipacm - from daisy_sprout pie, PKQ1.180917.001/V10.0.8.0.PDLMIXM
-vendor/bin/ipacm-diag|4dc647f49c278905e69af0ba9d8271927cd1859c
-
 # Keystore - from daisy_sprout pie, PKQ1.180917.001/V10.0.8.0.PDLMIXM
 vendor/lib/hw/keystore.msm8953.so|fdfa414efe6205bfd7750726ae730e4bd3c1ba00
 vendor/lib64/hw/keystore.msm8953.so|f71f1439c9c356ce05d88b876253b4e3dcb10f4b
