@@ -463,13 +463,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Use Open Gapps as prebuilt
-GAPPS_VARIANT := micro
-GAPPS_PRODUCT_PACKAGES += Chrome
-$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
-GAPPS_FORCE_PACKAGE_OVERRIDES := true
-GAPPS_FORCE_WEBVIEW_OVERRIDES := true
-
 # Add my prebuilt apps
 $(call inherit-product, vendor/Prebuilt_Apps/nganu.mk)
 
