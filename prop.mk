@@ -114,6 +114,15 @@ vendor.gralloc.enable_fb_ubwc=1
 PRODUCT_PROPERTY_OVERRIDES += \
 drm.service.enabled=true
 
+# LKMD
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.config.low_ram=true \
+ro.lmk.use_psi=false \
+ro.lmk.kill_heaviest_task=true \
+ro.lmk.kill_timeout_ms=100 \
+ro.lmk.use_minfree_levels=true \
+ro.lmk.log_stats=true
+
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.qfp=false
