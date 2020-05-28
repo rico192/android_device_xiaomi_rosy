@@ -131,6 +131,10 @@ PRODUCT_PACKAGES += \
     Snap \
     libshims_camera
 
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service
+
 # ConsumerIr
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
