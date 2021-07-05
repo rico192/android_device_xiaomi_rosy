@@ -131,6 +131,10 @@ PRODUCT_PACKAGES += \
     Snap \
     libshims_camera
 
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service
+
 # ConsumerIr
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
@@ -453,3 +457,18 @@ PRODUCT_COPY_FILES += \
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+#XiaomiParts
+PRODUCT_PACKAGES += \
+      XiaomiParts
+
+#PRODUCT_BOOT_JARS += \
+#   WfdCommon
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Add my prebuilt apps
+$(call inherit-product, vendor/Prebuilt_Apps/nganu.mk)
+
+# Inherit common proprietary files
+$(call inherit-product-if-exists, vendor/xiaomi/msm8937-common/msm8937-common-vendor.mk)

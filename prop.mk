@@ -72,7 +72,7 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.line
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.cne.feature=1 \
-persist.dpm.feature=1
+persist.vendor.dpm.feature=0
 
 # Coresight
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -93,9 +93,9 @@ debug.egl.hw=0 \
 debug.enable.sglscale=1 \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.mdpcomp.logs=0 \
-debug.sf.enable_hwc_vds=1 \
-debug.sf.hw=0 \
-debug.sf.latch_unsignaled=1 \
+debug.sf.disable_hwc_vds=1 \
+ro.hardware.egl=adreno \
+debug.sf.hw=1 \
 debug.sf.recomputecrop=0 \
 dev.pm.dyn_samplingrate=1 \
 persist.demo.hdmirotationlock=false \
@@ -221,3 +221,30 @@ wifi.interface=wlan0
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.debug.wfd.enable=1 \
 persist.sys.wfd.virtual=0
+
+# FWK
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.qti.va_aosp.support=1 \
+ro.vendor.qti.va_odm.support=1
+
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.lmk.low=1001 \
+ro.lmk.medium=800 \
+ro.lmk.critical=0 \
+ro.lmk.critical_upgrade=false \
+ro.lmk.upgrade_pressure=100 \
+ro.lmk.downgrade_pressure=100 \
+ro.lmk.kill_heaviest_task=true \
+ro.lmk.kill_timeout_ms=100 \
+ro.lmk.use_minfree_levels=true
+
+# Netflix
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.netflix.bsp_rev=Q660-13149-1
+
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.qti.sys.fw.bservice_enable=true \
+ro.vendor.qti.sys.fw.bservice_limit=5 \
+ro.vendor.qti.sys.fw.bservice_age=5000
